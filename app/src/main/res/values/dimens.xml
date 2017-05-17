@@ -1,0 +1,19 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="category_name_font_size">24sp</dimen>
+    <dimen name="category_marg">8dp</dimen>
+    <dimen name="price_sym_marg_bot">8dp</dimen>
+    <dimen name="price_sym_marg_right">8dp</dimen>
+    <dimen name="item_product_name_marg_top">8dp</dimen>
+    <dimen name="item_quantity">8dp</dimen>
+    <dimen name="item_price_tag_pad_left">8dp</dimen>
+    <dimen name="empty_font_size">16sp</dimen>
+    <dimen name="empty_text_view_marg_top">8dp</dimen>
+    <dimen name="item_product_name_marg_left">8dp</dimen>
+    <dimen name="list_item_quant_pad_left">8dp</dimen>
+    <dimen name="euro_symbol_font_size">20sp</dimen>
+    <dimen name="euro_symbol_pad_left">4dp</dimen>
+    <dimen name="list_item_price_pad_left">8dp</dimen>
+    <dimen name="price_font_size">20sp</dimen>
+
+</resources>

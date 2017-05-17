@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.nikolas.inventoryapp.ProductsActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- Empty view -->
+   <RelativeLayout
+       android:id="@+id/empty_view"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true">
+
+       <ImageView
+           android:id="@+id/empty_image_view"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/warehouse"
+           android:layout_centerHorizontal="true"/>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/empty_image_view"
+           android:text="@string/add_products"
+           android:gravity="center"
+           android:fontFamily="sans-serif-medium"
+           android:textSize="@dimen/empty_font_size"
+           android:layout_marginTop="@dimen/empty_text_view_marg_top"/>
+   </RelativeLayout>
+</RelativeLayout>

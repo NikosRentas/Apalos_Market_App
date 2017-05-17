@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/product_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Product name -->
+            <TextView
+                android:id="@+id/list_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingLeft="@dimen/item_product_name_marg_left"
+                android:paddingStart="@dimen/item_product_name_marg_left"
+                android:paddingTop="@dimen/item_product_name_marg_top"
+                android:text="@string/product_name_temp"
+                android:textSize="@dimen/category_name_font_size" />
+
+            <!-- Price -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/list_item_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingLeft="@dimen/list_item_price_pad_left"
+                    android:paddingStart="@dimen/list_item_price_pad_left"
+                    android:text="@string/price_temp"
+                    android:textSize="@dimen/price_font_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/list_item_price"
+                    android:layout_toEndOf="@id/list_item_price"
+                    android:paddingLeft="@dimen/euro_symbol_pad_left"
+                    android:paddingStart="@dimen/euro_symbol_pad_left"
+                    android:text="@string/price_symbol"
+                    android:textSize="@dimen/euro_symbol_font_size" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- Quantity -->
+        <TextView
+            android:id="@+id/list_item_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:paddingBottom="@dimen/item_quantity"
+            android:paddingLeft="@dimen/list_item_quant_pad_left"
+            android:paddingStart="@dimen/list_item_quant_pad_left"
+            android:text="@string/quantity_temp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

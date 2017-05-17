@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/product_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <!-- Quantity and order edit texts -->
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:orientation="vertical">
+
+           <EditText
+               android:id="@+id/quantity_value"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:hint="@string/amount_of_quantity"
+               android:inputType="number" />
+
+           <EditText
+               android:id="@+id/order_value"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/amount_of_order"
+               android:inputType="number" />
+
+       </LinearLayout>
+
+       <!-- Plus, minus and order buttons -->
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+               <!-- Plus button -->
+               <Button
+                   android:id="@+id/plus_btn"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/plus"
+                   android:minWidth="50dp" />
+
+               <!-- Minus button -->
+               <Button
+                   android:id="@+id/minus_btn"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/minus"
+                   android:minWidth="50dp"/>
+           </LinearLayout>
+
+           <!-- Order button-->
+           <Button
+               android:id="@+id/order_btn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/order" />
+       </LinearLayout>
+   </LinearLayout>
+
+    <!-- Delete button -->
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_btn" />
+
+    <!-- Sale button -->
+    <Button
+        android:id="@+id/sale_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sale_btn" />
+</LinearLayout>
