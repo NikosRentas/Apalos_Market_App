@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:layout_margin="@dimen/detail_parent_lin_marg"
     android:orientation="vertical">
 
     <ImageView
@@ -23,22 +23,22 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
             android:text="@string/product_name_temp"
-            android:textSize="24sp" />
+            android:textSize="@dimen/detail_prod_name_font_size" />
 
         <TextView
             android:id="@+id/prod_price_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingStart="8dp"
+            android:paddingLeft="@dimen/detail_price_pad_lef"
+            android:paddingStart="@dimen/detail_price_pad_lef"
             android:text="@string/price_temp" />
 
         <TextView
             android:id="@+id/prod_euro_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="4dp"
-            android:paddingStart="4dp"
+            android:paddingLeft="@dimen/deatail_euro_pad_left"
+            android:paddingStart="@dimen/deatail_euro_pad_left"
             android:text="@string/price_symbol" />
 
     </LinearLayout>
@@ -58,7 +58,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/detail_lin_mar_top"
             android:orientation="vertical">
 
             <EditText
@@ -66,14 +66,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/amount_of_quantity"
-                android:inputType="number" />
+                android:inputType="number"
+                android:maxLength="5"/>
 
             <EditText
                 android:id="@+id/order_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/amount_of_order"
-                android:inputType="number" />
+                android:inputType="number"
+                android:maxLength="20"/>
 
         </LinearLayout>
 
@@ -93,7 +95,7 @@
                     android:id="@+id/plus_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minWidth="50dp"
+                    android:minWidth="@dimen/plus_min"
                     android:text="@string/plus" />
 
                 <!-- Minus button -->
@@ -101,7 +103,7 @@
                     android:id="@+id/minus_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minWidth="50dp"
+                    android:minWidth="@dimen/plus_min"
                     android:text="@string/minus" />
             </LinearLayout>
 
