@@ -4,6 +4,6 @@
     <color name="colorPrimaryDark">#556080</color>
     <color name="colorAccent">#8A9CC1</color>
 
-    <color name="rowOne">#F1F1F1</color>
-    <color name="rowTwo">#FFFFFF</color>
+    <color name="even">#F1F1F1</color>
+    <color name="odd">#FFFFFF</color>
 </resources>

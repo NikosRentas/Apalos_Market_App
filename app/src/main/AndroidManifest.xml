@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nikolas.inventoryapp">
 
-    <uses-feature android:name="android.hardware.camera"
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="true" />
 
     <application
@@ -22,11 +23,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EditProduct" android:label="Edit products">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ProductsActivity"></meta-data>
+        <activity
+            android:name=".EditProduct"
+            android:label="Edit products"
+            android:parentActivityName=".ProductsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ProductsActivity" />
         </activity>
-        <activity android:name=".DetailProduct" android:label="Detail products"></activity>
+        <activity
+            android:name=".DetailProduct"
+            android:label="Detail products"
+            android:parentActivityName=".ProductsActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".ProductsActivity" />
+        </activity>
+
         <provider
             android:name=".dataBase.ProductProvider"
             android:authorities="com.example.nikolas.inventoryapp"

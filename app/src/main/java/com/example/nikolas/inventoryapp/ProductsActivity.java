@@ -92,7 +92,8 @@ public class ProductsActivity extends AppCompatActivity implements
                 ProductEntry.CONTENT_URI,
                 projection,
                 null,
-                null, null);
+                null,
+                null);
     }
 
     @Override

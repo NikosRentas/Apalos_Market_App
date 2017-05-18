@@ -21,6 +21,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nikolas.inventoryapp.dataBase.ProductContract.ProductEntry;
@@ -37,8 +38,12 @@ public class DetailProduct extends AppCompatActivity implements
     private EditText mOrderValue;
     private EditText mQuantityValue;
     private ImageView mProductImage;
+    private TextView mProductName;
+    private TextView mProductPrice;
+    private TextView mProductQuantity;
     private String mName;
     private int mQuantity;
+    private double mPrice;
     private byte[] mImage;
 
     @Override
@@ -58,6 +63,9 @@ public class DetailProduct extends AppCompatActivity implements
         mOrderBtn = (Button) findViewById(R.id.order_btn);
         mDeleteBtn = (Button) findViewById(R.id.delete_btn);
         mProductImage = (ImageView) findViewById(R.id.product_photo);
+        mProductPrice = (TextView) findViewById(R.id.prod_price_text);
+        mProductName = (TextView) findViewById(R.id.prod_name_text);
+        mProductQuantity = (TextView) findViewById(R.id.prod_quantity_text);
 
         // Take Edit texts
         mOrderValue = (EditText) findViewById(R.id.order_value);
@@ -155,13 +163,20 @@ public class DetailProduct extends AppCompatActivity implements
             int quantityIndexColumn = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_QUANTITY);
             int nameProductIndexColumn = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_NAME);
             int imageIndexColumn = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_IMAGE);
+            int priceIndexColumn = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_PRICE);
 
             mQuantity = cursor.getInt(quantityIndexColumn);
             mName = cursor.getString(nameProductIndexColumn);
             mImage = cursor.getBlob(imageIndexColumn);
+            mPrice = cursor.getDouble(priceIndexColumn);
 
             // Display image
             mProductImage.setImageBitmap(BitmapFactory.decodeByteArray(mImage, 0, mImage.length));
+
+            // Display product name and price
+            mProductName.setText(mName);
+            mProductPrice.setText(String.valueOf(mPrice));
+            mProductQuantity.setText(String.format("Quantity: %s", String.valueOf(mQuantity)));
         }
     }
 
@@ -185,7 +200,6 @@ public class DetailProduct extends AppCompatActivity implements
         else
             Toast.makeText(this, getString(R.string.update_ok) + String.valueOf(mQuantity), Toast.LENGTH_SHORT).show();
     }
-
 
     /**
      * Delete dialog

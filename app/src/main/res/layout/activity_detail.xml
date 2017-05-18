@@ -11,69 +11,108 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center" />
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+    <!-- Product name and price -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-       <!-- Quantity and order edit texts -->
-       <LinearLayout
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="8dp"
-           android:orientation="vertical">
+        <TextView
+            android:id="@+id/prod_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/product_name_temp"
+            android:textSize="24sp" />
 
-           <EditText
-               android:id="@+id/quantity_value"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:hint="@string/amount_of_quantity"
-               android:inputType="number" />
+        <TextView
+            android:id="@+id/prod_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/price_temp" />
 
-           <EditText
-               android:id="@+id/order_value"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:hint="@string/amount_of_order"
-               android:inputType="number" />
+        <TextView
+            android:id="@+id/prod_euro_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:paddingStart="4dp"
+            android:text="@string/price_symbol" />
 
-       </LinearLayout>
+    </LinearLayout>
 
-       <!-- Plus, minus and order buttons -->
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:orientation="vertical">
+    <TextView
+        android:id="@+id/prod_quantity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/quantity_temp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Quantity and order edit texts -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/quantity_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/amount_of_quantity"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/order_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/amount_of_order"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <!-- Plus, minus and order buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
-           <LinearLayout
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-               <!-- Plus button -->
-               <Button
-                   android:id="@+id/plus_btn"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="@string/plus"
-                   android:minWidth="50dp" />
+                <!-- Plus button -->
+                <Button
+                    android:id="@+id/plus_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="50dp"
+                    android:text="@string/plus" />
 
-               <!-- Minus button -->
-               <Button
-                   android:id="@+id/minus_btn"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="@string/minus"
-                   android:minWidth="50dp"/>
-           </LinearLayout>
+                <!-- Minus button -->
+                <Button
+                    android:id="@+id/minus_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="50dp"
+                    android:text="@string/minus" />
+            </LinearLayout>
 
-           <!-- Order button-->
-           <Button
-               android:id="@+id/order_btn"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="@string/order" />
-       </LinearLayout>
-   </LinearLayout>
+            <!-- Order button-->
+            <Button
+                android:id="@+id/order_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order" />
+        </LinearLayout>
+    </LinearLayout>
 
     <!-- Delete button -->
     <Button
