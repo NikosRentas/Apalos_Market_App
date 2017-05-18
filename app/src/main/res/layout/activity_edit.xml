@@ -42,7 +42,6 @@
             android:id="@+id/name_edit_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/name_hint"
             android:inputType="textCapSentences"/>
 
         <!-- Quantity -->
@@ -50,7 +49,6 @@
             android:id="@+id/quantity_edit_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/quantity_hint"
             android:inputType="number" />
 
         <!-- Price -->

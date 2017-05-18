@@ -67,6 +67,19 @@
             android:paddingStart="@dimen/list_item_quant_pad_left"
             android:text="@string/quantity_temp" />
 
+        <!-- Sale button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/list_item_sale_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sale_btn"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
