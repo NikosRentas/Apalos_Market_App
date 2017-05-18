@@ -33,4 +33,6 @@
     <string name="amount_of_quantity">Amount of quantity</string>
     <string name="delete_btn">delete</string>
     <string name="sale_btn">Sale</string>
+    <string name="supplier_email">supplier@kappakeepo.com</string>
+    <string name="subject">I need supplies for :</string>
 </resources>

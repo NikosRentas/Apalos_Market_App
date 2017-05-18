@@ -15,5 +15,11 @@
     <dimen name="euro_symbol_pad_left">4dp</dimen>
     <dimen name="list_item_price_pad_left">8dp</dimen>
     <dimen name="price_font_size">20sp</dimen>
+    <dimen name="detail_parent_lin_marg">16dp</dimen>
+    <dimen name="detail_prod_name_font_size">24sp</dimen>
+    <dimen name="detail_price_pad_lef">8dp</dimen>
+    <dimen name="deatail_euro_pad_left">4dp</dimen>
+    <dimen name="detail_lin_mar_top">8dp</dimen>
+    <dimen name="plus_min">50dp</dimen>
 
 </resources>

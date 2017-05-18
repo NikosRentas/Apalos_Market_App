@@ -15,7 +15,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -55,7 +54,6 @@ public class ProductDetailActivity extends AppCompatActivity implements
         mCurrentUri = intent.getData();
         getLoaderManager().initLoader(LOADER_ID, null, this);
 
-        Log.v("uri", mCurrentUri.toString());
         // Take buttons
         mAddBtn = (Button) findViewById(R.id.plus_btn);
         mMinusBtn = (Button) findViewById(R.id.minus_btn);
@@ -78,6 +76,9 @@ public class ProductDetailActivity extends AppCompatActivity implements
                 String quant = mQuantityValue.getText().toString().trim();
                 if (TextUtils.isEmpty(quant)) {
                     mQuantity++;
+                    if (String.valueOf(mQuantity).length() > 5)
+                        mQuantity--;
+
                     saveProduct();
                     return;
                 }
@@ -261,8 +262,8 @@ public class ProductDetailActivity extends AppCompatActivity implements
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("message/rfc822");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"supplier@kappakeepo.com"});
-        intent.putExtra(Intent.EXTRA_SUBJECT, "I need supplies for : " + mName);
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{getString(R.string.supplier_email)});
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subject) + mName);
         intent.putExtra(Intent.EXTRA_TEXT, text);
 
         try {

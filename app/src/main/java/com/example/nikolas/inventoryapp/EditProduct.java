@@ -26,7 +26,7 @@ import java.io.ByteArrayOutputStream;
 
 public class EditProduct extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
-    private static int sNoPhoto = -1;
+    private int mNoPhoto = -1;
     private EditText mProductText;
     private EditText mQuantityText;
     private EditText mPriceText;
@@ -109,7 +109,7 @@ public class EditProduct extends AppCompatActivity {
             imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
             byteArray = stream.toByteArray();
 
-            sNoPhoto = 0; // Photo exits
+            mNoPhoto = 0; // Photo exits
         }
     }
 
@@ -139,7 +139,7 @@ public class EditProduct extends AppCompatActivity {
         // Check for empty entry values
         if (TextUtils.isEmpty(nameString) || TextUtils.isEmpty(quantityString)
                 || TextUtils.isEmpty(priceString)
-                || sNoPhoto == -1) {
+                || mNoPhoto == -1) {
             Toast.makeText(this, R.string.no_values, Toast.LENGTH_SHORT).show();
             return;
         }
