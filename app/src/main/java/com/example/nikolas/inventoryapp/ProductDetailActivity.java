@@ -26,7 +26,7 @@ import android.widget.Toast;
 
 import com.example.nikolas.inventoryapp.dataBase.ProductContract.ProductEntry;
 
-public class DetailProduct extends AppCompatActivity implements
+public class ProductDetailActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
     private static final int LOADER_ID = 1;
     private Uri mCurrentUri;

@@ -22,7 +22,7 @@ import com.example.nikolas.inventoryapp.dataBase.ProductContract.ProductEntry;
 public class ProductsActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
     private static final int LOADER_ID = 1;
-    ProductCursorAdapter mCursorAdapter;
+    private ProductCursorAdapter mCursorAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,7 @@ public class ProductsActivity extends AppCompatActivity implements
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(ProductsActivity.this, DetailProduct.class);
+                Intent intent = new Intent(ProductsActivity.this, ProductDetailActivity.class);
                 Uri uri = ContentUris.withAppendedId(ProductEntry.CONTENT_URI, id);
                 intent.setData(uri);
                 startActivity(intent);

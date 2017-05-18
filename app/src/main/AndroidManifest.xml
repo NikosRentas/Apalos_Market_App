@@ -32,7 +32,7 @@
                 android:value=".ProductsActivity" />
         </activity>
         <activity
-            android:name=".DetailProduct"
+            android:name=".ProductDetailActivity"
             android:label="Detail products"
             android:parentActivityName=".ProductsActivity">
         <meta-data

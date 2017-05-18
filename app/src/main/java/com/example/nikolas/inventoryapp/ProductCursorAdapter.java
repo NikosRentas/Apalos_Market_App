@@ -76,6 +76,8 @@ public class ProductCursorAdapter extends CursorAdapter {
         int rowUpdated;
 
         mQuantity--;
+        if (mQuantity < 0)
+            mQuantity = 0;
         ContentValues values = new ContentValues();
         values.put(ProductEntry._ID, id);
         values.put(ProductEntry.COLUMN_PRODUCT_QUANTITY, mQuantity);
